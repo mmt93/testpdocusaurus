@@ -14,6 +14,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install pdoc3
+        npm install -g docusaurus
         npm install
     - name: Build documentation
       run: |
