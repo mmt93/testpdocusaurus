@@ -20,7 +20,7 @@ jobs:
 
     - name: Build
       run: |
-        pdoc --output-dir=website2/docs ml-tools 
+        pdoc --output-dir=website2/docs my_module.py
         npm run build --prefix website2
 
     - name: Deploy to GitHub Pages
