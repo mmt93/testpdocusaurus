@@ -16,14 +16,13 @@ jobs:
     - name: Install dependencies 
       run: |
         pip install pdoc3
-        npm install -g docusaurus
-        npm install
-        npm start
+        pdoc --output-dir=website2/docs my_module.py
 
     - name: Build
       run: |
-        pdoc --output-dir=website2/docs my_module.py
-        npm run build --prefix website2
+        cd website2
+        npm install
+        npm run build
 
     - name: Deploy to GitHub Pages
       run: |
